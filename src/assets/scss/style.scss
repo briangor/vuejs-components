@@ -1,0 +1,28 @@
+@import 'colors';
+
+
+.nav-items {
+    background-color: $light;
+    display: flex;
+    list-style-type: none;
+    border: 1px solid red;
+
+    li {
+        margin-right: 1rem;
+        cursor: pointer;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    .search {
+        border: 1px solid green;
+        
+    }
+}
+
+#home {
+    background-color: rgb(245, 241, 237);
+}
+
