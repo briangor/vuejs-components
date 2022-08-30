@@ -4,7 +4,6 @@
     <HomePage title="Home" />
   </div>
 </template>
-
 <script>
 
 import HomePage from './components/HomePage.vue';

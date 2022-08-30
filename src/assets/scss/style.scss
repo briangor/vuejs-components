@@ -1,5 +1,24 @@
 @import 'colors';
 
+// Mixins
+@mixin btn {
+    height: 2.5rem;
+    background-color: $blue;
+    color: $white;
+    cursor: pointer;
+    border: none;
+    border-radius: .2rem;
+    margin: .5rem;
+ 
+    &:hover {
+        background-color: $lightblue;
+    }
+}
+
+// Buttons 
+.button {
+    @include btn;
+}
 
 .nav-items {
     background-color: $light;
@@ -25,4 +44,23 @@
 #home {
     background-color: rgb(245, 241, 237);
 }
+
+// Components
+#button-counter {
+    @include btn;
+}
+
+
+
+// Slots
+.frame {
+    border: 1px solid $blue;
+    border-radius: .5rem;
+
+    &:hover {
+        border-color: $lightblue;
+    }
+}
+
+
 

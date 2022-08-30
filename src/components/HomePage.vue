@@ -35,23 +35,31 @@
             </form>
             <!-- v-bind:title="todo.title" -->
             <ul>
-                <li id="todo-item" v-for="(todo, index) in todos" v-bind:key="todo.id" 
-                    v-on:remove="todos.splice(index, 1)">{{ todo.title}}</li>
+                <li id="todo-item" v-for="(todo, index) in todos" v-bind:key="todo.id"
+                    v-on:remove="todos.splice(index, 1)">{{  todo.title }}</li>
             </ul>
         </div>
         <hr>
-        <ButtonCounter />
-        <ButtonCounter />
+        <ButtonCounter name="button1" />
+        <ButtonCounter name="button2" />
 
-        <SmallCard />>
+        <SmallCard artists=artists />
+        <hr>
+        <!-- slots -->
 
+        <FrameCard>
+            <img src="../assets/images/logo.png" />
+        </FrameCard>
 
+        <ChildComp @changeMsg="setMessage" :msg="welcomeMsg"/>
     </div>
 </template>
 
 <script>
-import ButtonCounter from "./button-counter.vue";
+import ButtonCounter from "./ButtonCounter.vue";
 import SmallCard from "./SmallCard.vue";
+import FrameCard from "./FrameCard.vue";
+import ChildComp from "./ChildComp.vue";
 
 export default {
     name: "HomePage",
@@ -69,6 +77,9 @@ export default {
                 title: this.newTodoText
             });
             this.newTodoText = "";
+        },
+        setMessage(msg) {
+          this.welcomeMsg = msg;
         }
     },
     data() {
@@ -100,17 +111,24 @@ export default {
                     title: "Mow the lawn"
                 }
             ],
-            nextTodoId: 4
+            nextTodoId: 4,
+            artists: [
+                { id: 1, name: 'Stormzy', genre: 'hiphop', country: 'United Kingdom' },
+                { id: 2, name: 'Burna Boy', genre: 'afrobeats', country: 'Nigeria' },
+                { id: 3, name: 'Davido', genre: 'afrobeats', country: 'Nigeria' },
+                { id: 4, name: 'Sarkodie', genre: 'hiphop', country: 'Ghana' },
+            ],
+            welcomeMsg: "Hello Vue"
         };
     },
     created: function () {
         // `this` points to the vm instance
         console.log("Lifecycle => at_created var is: " + this.at_created);
     },
-    components: { ButtonCounter, SmallCard }
+    components: { ButtonCounter, SmallCard, FrameCard, ChildComp }
 }
 </script>
 
 <style lang="scss" scoped>
-    @import '../assets/scss/style.scss';
+@import '../assets/scss/style.scss';
 </style>
