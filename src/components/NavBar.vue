@@ -1,5 +1,5 @@
 <template>
-    <div class="navbar">
+    <nav class="navbar">
         <ul class="nav-items">
             <li>Home</li>
             <li>About</li>
@@ -8,10 +8,10 @@
             
         </ul>
         <div class="search">
-                <input type="text" placeholder="" class="search">
-                <button>Search</button>
-            </div>
-    </div>
+            <input type="text" placeholder="" class="search">
+            <button>Search</button>
+        </div>
+    </nav>
 </template>
 
 <script>
