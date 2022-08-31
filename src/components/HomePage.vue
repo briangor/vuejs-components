@@ -58,7 +58,7 @@
 
         <ParentComp/>
         <hr>
-        
+       <DefaultButton />
     </div>
 </template>
 

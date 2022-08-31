@@ -11,8 +11,8 @@
 
 import NavBar from './components/NavBar.vue';
 import HomePage from './components/HomePage.vue';
-import AboutPage from './components/AboutPage.vue';
-import ContactPage from './components/ContactPage.vue';
+import AboutPage from './components/pages/AboutPage.vue';
+import ContactPage from './components/pages/ContactPage.vue';
 import FooterComp from './components/FooterComp.vue';
 
 export default {
@@ -22,7 +22,7 @@ export default {
     NavBar,
     AboutPage,
     ContactPage,
-    FooterComp
+    FooterComp,
 }
 }
 </script>
