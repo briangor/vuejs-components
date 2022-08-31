@@ -40,24 +40,31 @@
             </ul>
         </div>
         <hr>
+        <h4>Component Resusing</h4>
+        <p>A single button component with two instances</p>
         <ButtonCounter name="button1" />
         <ButtonCounter name="button2" />
-       <SmallCard/>
+       <!-- <SmallCard/> -->
         <hr>
-        <!-- slots -->
 
+        <!-- slots -->
+        <h4>Slots</h4>
+        <p>Frame with a slot</p>
         <FrameCard>
             <img src="../assets/images/logo.png" />
         </FrameCard>
+        <FrameCard></FrameCard>
+        <hr>
 
         <ParentComp/>
+        <hr>
         
     </div>
 </template>
 
 <script>
 import ButtonCounter from "./ButtonCounter.vue";
-import SmallCard from "./SmallCard.vue";
+// import SmallCard from "./SmallCard.vue";
 import FrameCard from "./FrameCard.vue";
 import ParentComp from "./ParentComp.vue";
 
@@ -121,7 +128,7 @@ export default {
         // `this` points to the vm instance
         console.log("Lifecycle => at_created var is: " + this.at_created);
     },
-    components: { ButtonCounter, SmallCard, FrameCard, ParentComp }
+    components: { ButtonCounter, FrameCard, ParentComp }
 }
 </script>
 

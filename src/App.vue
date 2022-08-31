@@ -2,18 +2,27 @@
   <div id="app">
     <NavBar/>
     <HomePage title="Home" />
+    <AboutPage />
+    <ContactPage />
+    <FooterComp/>
   </div>
 </template>
 <script>
 
-import HomePage from './components/HomePage.vue';
 import NavBar from './components/NavBar.vue';
+import HomePage from './components/HomePage.vue';
+import AboutPage from './components/AboutPage.vue';
+import ContactPage from './components/ContactPage.vue';
+import FooterComp from './components/FooterComp.vue';
 
 export default {
   name: 'App',
   components: {
     HomePage,
-    NavBar
+    NavBar,
+    AboutPage,
+    ContactPage,
+    FooterComp
 }
 }
 </script>

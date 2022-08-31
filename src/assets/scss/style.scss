@@ -37,13 +37,13 @@
     }
 
     .search {
-        border: 1px solid green;
+        border: 1px solid $green;
         
     }
 }
 
 #home {
-    background-color: rgb(245, 241, 237);
+    background-color: $bg;
 }
 
 // Components
@@ -57,10 +57,30 @@
 .frame {
     border: 1px solid $blue;
     border-radius: .5rem;
-
+    width: 50%;
     &:hover {
         border-color: $lightblue;
     }
+}
+
+// About Page
+.about {
+    padding: 2rem 0;
+}
+
+// Contact Page
+.contact {
+    background-color: $bg;
+    text-align: left;
+    padding: 2rem 3rem;
+    input {
+        margin: .5rem 0;
+    }
+}
+
+// Footer
+.footer {
+    padding: 3rem 0;
 }
 
 
