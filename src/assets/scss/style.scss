@@ -50,6 +50,13 @@
 #button-counter {
     @include btn;
 }
+.parent-comp {
+    
+}
+
+.child-comp {
+    border: 1px solid $dark;
+}
 
 
 

@@ -1,6 +1,7 @@
 <template>
     <div class="home">
-        <ChildComp @changeMsg="setMessage" :msg="welcomeMsg"/>
+        <p>This line is in parent component</p>
+        <ChildComp @changeMsg="setMessage" :msg="parentMsg"/>
     </div>
 </template>
 
@@ -10,12 +11,12 @@ export default {
     name: "ParentComp",
     methods: {
         setMessage(msg) {
-          this.welcomeMsg = msg;
+          this.parentMsg = msg;
         }
     },
     data() {
         return {
-            welcomeMsg: "Hello Vue"
+            parentMsg: "Hello Vue - from Parent"
         }
         
     },
