@@ -19,7 +19,7 @@
         <!-- Two-way data binding -->
         <input v-model="message">
         <!-- <button v-on:click="reverseMessage">Reverse Message</button> -->
-        <button @click="reverseMessage">Reverse Message</button>
+        <button @click="reverseMessage" class="btn btn-outline-primary">Reverse Message</button>
 
         <hr>
         <h5>Composing with components</h5>
@@ -31,7 +31,7 @@
             <form v-on:submit.prevent="addNewTodo">
                 <label for="new-todo">Add a todo</label>
                 <input v-model="newTodoText" id="new-todo" placeholder="E.g. Feed the cat">
-                <button>Add</button>
+                <button class="btn btn-outline-primary">Add</button>
             </form>
             <!-- v-bind:title="todo.title" -->
             <ul>

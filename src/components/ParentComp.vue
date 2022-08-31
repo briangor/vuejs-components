@@ -16,7 +16,7 @@ export default {
     },
     data() {
         return {
-            parentMsg: "Hello Vue - from Parent"
+            parentMsg: 'Hello Vue - from Parent',
         }
         
     },

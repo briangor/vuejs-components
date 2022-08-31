@@ -18,7 +18,11 @@ export default {
         }
     },
     props: {
-        msg: String
+        msg: {
+            type: String,
+            required: true
+        },
+    
     },
     methods: {
         changeMsg() {
