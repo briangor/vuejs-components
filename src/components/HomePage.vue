@@ -42,8 +42,7 @@
         <hr>
         <ButtonCounter name="button1" />
         <ButtonCounter name="button2" />
-
-        <SmallCard artists=artists />
+       <SmallCard/>
         <hr>
         <!-- slots -->
 
@@ -51,7 +50,8 @@
             <img src="../assets/images/logo.png" />
         </FrameCard>
 
-        <ChildComp @changeMsg="setMessage" :msg="welcomeMsg"/>
+        <ParentComp/>
+        
     </div>
 </template>
 
@@ -59,7 +59,7 @@
 import ButtonCounter from "./ButtonCounter.vue";
 import SmallCard from "./SmallCard.vue";
 import FrameCard from "./FrameCard.vue";
-import ChildComp from "./ChildComp.vue";
+import ParentComp from "./ParentComp.vue";
 
 export default {
     name: "HomePage",
@@ -77,9 +77,6 @@ export default {
                 title: this.newTodoText
             });
             this.newTodoText = "";
-        },
-        setMessage(msg) {
-          this.welcomeMsg = msg;
         }
     },
     data() {
@@ -118,14 +115,13 @@ export default {
                 { id: 3, name: 'Davido', genre: 'afrobeats', country: 'Nigeria' },
                 { id: 4, name: 'Sarkodie', genre: 'hiphop', country: 'Ghana' },
             ],
-            welcomeMsg: "Hello Vue"
         };
     },
     created: function () {
         // `this` points to the vm instance
         console.log("Lifecycle => at_created var is: " + this.at_created);
     },
-    components: { ButtonCounter, SmallCard, FrameCard, ChildComp }
+    components: { ButtonCounter, SmallCard, FrameCard, ParentComp }
 }
 </script>
 

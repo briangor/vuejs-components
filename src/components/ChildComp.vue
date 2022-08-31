@@ -14,7 +14,7 @@ export default {
     name: 'ChildComp',
     data() {
         return {
-            welcomeMsg: " "
+            welcomeMsg: "Hello"
         }
     },
     props: {
